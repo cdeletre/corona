@@ -759,9 +759,7 @@ bool    ImGui_ImplOpenGL3_CreateDeviceObjects()
         } else {
             vertex_shader = vertex_shader_glsl_120;
             fragment_shader = fragment_shader_glsl_120;
-        }   
-        vertex_shader = vertex_shader_glsl_120;
-        fragment_shader = fragment_shader_glsl_120;
+        }
     }
     else if (glsl_version >= 410)
     {
