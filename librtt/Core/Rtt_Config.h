@@ -378,12 +378,12 @@
 // Linux
 //
 #if defined( Rtt_LINUX_ENV )
-	#define GL_GLEXT_PROTOTYPES
+	//#define GL_GLEXT_PROTOTYPES
+	#define Rtt_OPENGLES
 	#define Rtt_USE_GLOBAL_VARIABLES
 	#define Rtt_VPRINTF_SUPPORTED
 	#define Rtt_USE_LIMITS
 	#define Rtt_ALLOCATOR_SYSTEM
-	#define Rtt_OPENGL_CLIENT_SIDE_ARRAYS 1
 	#define Rtt_LUA_LFS
 	#define Rtt_SQLITE
 	//#define Rtt_NETWORK

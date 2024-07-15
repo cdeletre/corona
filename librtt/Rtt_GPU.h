@@ -24,6 +24,9 @@
 	#elif defined( Rtt_POWERVR_ENV )
 		#include <GLES/egl.h>
 		#include <GLES/gl.h>
+	#elif defined( Rtt_LINUX_ENV )
+		#include <GLES/egl.h>
+		#include <GLES2/gl2.h>
 	#else
 		#error TODO: Add path to gl.h header
 	#endif
@@ -77,7 +80,7 @@
 		#define Rtt_glTranslate		glTranslatef
 	#endif
 
-	#if GL_ES_VERSION_2_0
+	#if defined(GL_ES_VERSION_2_0)
 		#define Rtt_GL_COLOR_ATTACHMENT0		GL_COLOR_ATTACHMENT0
 		#define Rtt_GL_FRAMEBUFFER				GL_FRAMEBUFFER
 		#define Rtt_GL_FRAMEBUFFER_BINDING		GL_FRAMEBUFFER_BINDING

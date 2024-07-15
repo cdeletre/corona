@@ -118,7 +118,7 @@ namespace Rtt
 
 		// Setup Platform/Renderer backends
 		ImGui_ImplSDL2_InitForOpenGL(fWindow, fGLcontext);
-		const char* glsl_version = "#version 130";
+		const char* glsl_version = "#version 100";
 		ImGui_ImplOpenGL3_Init(glsl_version);
 
 		return true;

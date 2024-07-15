@@ -30,6 +30,9 @@
 		#include <GLES2/gl2ext.h>
 		#include <GLES2/gl2ext_nv.h>
 		#include <GLES2/gl2platform.h>
+	#elif defined( Rtt_LINUX_ENV )
+		#include <GLES/egl.h>
+		#include <GLES2/gl2.h>
 #else
 		#error TODO: Add path to gl.h header
 	#endif
@@ -80,7 +83,7 @@ void GLLogError( const char* message, const char* file, int line );
 // Hide any differences between OpenGL versions
 #if defined( Rtt_OPENGLES )
 
-	#if defined( Rtt_WIN_PHONE_ENV )
+	#if defined( Rtt_WIN_PHONE_ENV ) || defined( Rtt_LINUX_ENV )
 		#define Rtt_glBindVertexArray( id )
 		#define Rtt_glDeleteVertexArrays( count, names )
 		#define Rtt_glGenVertexArrays( count, names )
